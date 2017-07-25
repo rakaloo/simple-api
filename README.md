@@ -1,12 +1,12 @@
 # Simple Flask API #
-Returns a greeting of 'Hello, Guest' or 'Hello, <name>' if a name has been provided via a POST request.  The name persists until it is deleted or overwritten.
+Returns a greeting of 'Hello, Guest' or 'Hello, {name}' if a name has been posted.  The name persists until it is deleted or overwritten.
 
 # Application Setup #
-Install requirements:
+Install requirements: \n
 `$ pip install -r requirements.txt`
-Start server:
+Start server: \n
 `$ FLASK_APP=app.py flask run`
-Ping server:
+Ping server: \n
 * GET request
 `$ curl http://127.0.0.1:5000/greeting/`
 * POST request
