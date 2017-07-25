@@ -1,10 +1,15 @@
+
+import os
 from flask import Flask, request
 app = Flask(__name__)
 
-@app.route('/greeting/', methods=['GET', 'POST'])
+@app.route('/greeting/', methods=['GET', 'POST', 'DELETE'])
 def greeting():
     name = 'Guest'
-    if request.method == 'POST':
+    if request.method  == 'GET' and os.path.isfile('name.txt'):
+        file = open('name.txt', 'r')
+        name = file.read()
+    elif request.method == 'POST':
         name = post_name(request.form['name'])
     return 'Hello, {0} \n'.format(name)
 
