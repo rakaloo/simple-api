@@ -2,11 +2,16 @@
 Returns a greeting of 'Hello, Guest' or 'Hello, {name}' if a name has been posted.  The name persists until it is deleted or overwritten.
 
 # Application Setup #
-Install requirements: \n
+Install requirements:
+
 `$ pip install -r requirements.txt`
-Start server: \n
+
+Start server:
+
 `$ FLASK_APP=app.py flask run`
-Ping server: \n
+
+Ping server:
+
 * GET request
 `$ curl http://127.0.0.1:5000/greeting/`
 * POST request
