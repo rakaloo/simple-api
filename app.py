@@ -11,9 +11,14 @@ def greeting():
         name = file.read()
     elif request.method == 'POST':
         name = post_name(request.form['name'])
+    elif request.method == 'DELETE':
+        delete_name()
     return 'Hello, {0} \n'.format(name)
 
 def post_name(name):
     file = open('name.txt', 'w')
     file.write(name)
     return name
+
+def delete_name():
+    os.remove('name.txt')
